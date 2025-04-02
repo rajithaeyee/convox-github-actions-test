@@ -27,6 +27,7 @@ jobs:
         uses: convox/action-login@v2
         with:
           password: ${{ secrets.CONVOX_DEPLOY_KEY }}
+          host: console-staging.convox.com
 
       - name: Use forked Convox build action
         id: build
@@ -34,5 +35,6 @@ jobs:
         with:
           rack: test-130001
           app: test-app1
+          host: console-staging.convox.com
         # env:
         #   HOST: ${{ secrets.HOST }}
