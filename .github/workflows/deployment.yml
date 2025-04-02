@@ -31,7 +31,7 @@ jobs:
 
       - name: Use forked Convox build action
         id: build
-        uses: rajithaeyee/action-build@master
+        uses: rajithaeyee/action-build@chore/migrate-github-actions-output
         with:
           rack: test-130001
           app: test-app1
