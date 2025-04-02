@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Use forked Convox build action
-        uses: rajithaeyee/action-build@main
+        uses: rajithaeyee/action-build@master
         with:
           rack: test-130001
           app: test-app1
