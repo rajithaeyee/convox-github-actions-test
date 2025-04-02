@@ -22,7 +22,14 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Login to Convox
+        id: login
+        uses: convox/action-login@v2
+        with:
+          password: ${{ secrets.CONVOX_DEPLOY_KEY }}
+
       - name: Use forked Convox build action
+        id: build
         uses: rajithaeyee/action-build@master
         with:
           rack: test-130001
